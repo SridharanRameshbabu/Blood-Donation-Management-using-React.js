@@ -1,0 +1,13 @@
+.card {
+    border-radius: 20px;
+    background-color: #fffdfd;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  input, select {
+    border-radius: 8px;
+  }
+  

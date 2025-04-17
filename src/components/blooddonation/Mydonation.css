@@ -1,0 +1,27 @@
+.main{
+    display: flex;
+}
+
+
+.mydonation-table {
+    flex: 0.7;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 50px !important;
+  }
+  
+  table th, table td {
+    vertical-align: middle !important;
+    font-size: 15px;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f8d7da; /* Light red hover */
+  }
+
+.donate{
+    display: block;
+    margin: 10px auto;
+}
+  
