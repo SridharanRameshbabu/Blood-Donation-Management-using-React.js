@@ -40,6 +40,7 @@ const Usersignup = () => {
 
   const navigate = useNavigate();
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -126,19 +127,53 @@ const Usersignup = () => {
             <div className="icon-box"><FaCalendarAlt className="text-white" /></div>
             <input type="number" name="age" value={formData.age} onChange={handleChange} className="form-control input-custom" placeholder="Age" required />
           </div>
-
           <div className="col-md-6 mb-3 d-flex align-items-center">
             <div className="icon-box"><FaTint className="text-white" /></div>
-            <input type="text" name="bloodgroup" value={formData.bloodgroup} onChange={handleChange} className="form-control input-custom" placeholder="Blood Group" required />
+            <select
+              name="bloodgroup"
+              value={formData.bloodgroup}
+              onChange={handleChange}
+              className="form-control input-custom"
+              required
+            >
+              <option value="" disabled>Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
           </div>
+
           <div className="col-md-6 mb-3 d-flex align-items-center">
             <div className="icon-box"><FaVenusMars className="text-white" /></div>
-            <input type="text" name="gender" value={formData.gender} onChange={handleChange} className="form-control input-custom" placeholder="Gender" required />
+            <select
+              name="gender"
+              value={formData.gender}
+              onChange={handleChange}
+              className="form-control input-custom"
+              required
+            >
+              <option value="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
+
 
           <div className="col-md-6 mb-3 d-flex align-items-center">
             <div className="icon-box"><FaPhone className="text-white" /></div>
-            <input type="number" name="mobile" value={formData.mobile} onChange={handleChange} className="form-control input-custom" placeholder="Mobile Number" required />
+            <input type="number" name="mobile" value={formData.mobile} onChange={(e) => {
+              const value = e.target.value;
+              if (value.length <= 10) {
+                handleChange(e);
+              }
+              }} 
+              className="form-control input-custom" placeholder="Mobile Number" required />
           </div>
           <div className="col-md-6 mb-3 d-flex align-items-center">
             <div className="icon-box"><FaEnvelope className="text-white" /></div>
