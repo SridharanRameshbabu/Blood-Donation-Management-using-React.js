@@ -3,14 +3,20 @@ import Navbar from '../navbar/Navbar';
 import Sidebar from '../sidebar/Sidebar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Bloodbankdashboard.css';
+import APlus from '../../assests/a-blood-type-icon-md.png'; 
+import BPlus from '../../assests/b-blood-type-icon-md.png';
+import OPlus from '../../assests/0-blood-type-icon-md.png';
+import OMinus from '../../assests/0--blood-type-icon-md.png';
+import ABPlus from '../../assests/ab-blood-type-icon-md.png';
+import ABMinus from '../../assests/ab--blood-type-icon-md.png'
 
 const bloodStocksTemplate = [
-    { type: "A+", source: "https://cdn.creazilla.com/icons/3271077/a-blood-type-icon-md.png" },
-    { type: "B+", source: "https://cdn.creazilla.com/icons/3271083/b-blood-type-icon-md.png" },
-    { type: "O+", source: "https://cdn.creazilla.com/icons/3271074/0-blood-type-icon-sm.png" },
-    { type: "O-", source: "https://cdn.creazilla.com/icons/3271076/0-blood-type-icon-md.png" },
-    { type: "AB+", source: "https://cdn.creazilla.com/icons/3271075/ab-blood-type-icon-md.png" },
-    { type: "AB-", source: "https://cdn.creazilla.com/icons/3271079/ab-blood-type-icon-md.png" },
+    { type: "A+", source: APlus },
+    { type: "B+", source: BPlus },
+    { type: "O+", source: OPlus },
+    { type: "O-", source: OMinus },
+    { type: "AB+", source: ABPlus },
+    { type: "AB-", source: ABMinus },
 ];
 
 const Bloodbankdashboard = () => {
