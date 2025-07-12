@@ -3,6 +3,7 @@ import { FaTint, FaHome, FaHeartbeat, FaUserCircle, FaHospital } from 'react-ico
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Home.css';
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 
@@ -32,37 +33,37 @@ const Home = () => {
     <div className="home">
       <nav className="navbar navbar-expand-lg navbar-home sticky-top px-4">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <FaTint style={{ fontSize: "24px", color: "white" }} /> VeinVault
-          </a>
+          </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item me-3">
-                <a className="nav-link text-white d-flex align-items-center" href="/">
+                <Link className="nav-link text-white d-flex align-items-center" to="/">
                   <FaHome style={{ marginRight: "5px", fontSize: "18px" }} />
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-3">
-                <a className="nav-link text-white d-flex align-items-center" href="#">
+                <Link className="nav-link text-white d-flex align-items-center" to="#">
                   <FaHeartbeat style={{ marginRight: "5px", fontSize: "18px" }} />
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-3">
-                <a className="nav-link text-white d-flex align-items-center" href="/login">
+                <Link className="nav-link text-white d-flex align-items-center" to="/login">
                   <FaUserCircle style={{ marginRight: "5px", fontSize: "18px" }} />
                   User Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-3">
-                <a className="nav-link text-white d-flex align-items-center" href="/bloodbanklogin">
+                <Link className="nav-link text-white d-flex align-items-center" to="/bloodbanklogin">
                   <FaHospital style={{ marginRight: "5px", fontSize: "18px" }} />
                   Blood Bank Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,9 +84,9 @@ const Home = () => {
               <div className="card-body d-flex flex-column">
                 <h4 className="card-title mb-3 text-primary fw-bold">{item.title}</h4>
                 <p className="card-text flex-grow-1">{item.description}</p>
-                <a href={item.buttonLink} className="btn btn-outline-primary mt-3 rounded-pill px-4 py-2">
+                <Link to={item.buttonLink} className="btn btn-outline-primary mt-3 rounded-pill px-4 py-2">
                   {item.buttonText}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

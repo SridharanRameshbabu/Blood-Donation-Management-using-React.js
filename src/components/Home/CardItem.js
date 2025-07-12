@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const CardItem = ({ title, text, buttonText, link }) => {
   return (
@@ -7,9 +8,7 @@ const CardItem = ({ title, text, buttonText, link }) => {
         <div className="card-body d-flex flex-column">
           <h4 className="card-title mb-3 text-primary fw-bold">{title}</h4>
           <p className="card-text flex-grow-1">{text}</p>
-          <a href={link} className="btn btn-outline-primary mt-3 rounded-pill px-4 py-2">
-            {buttonText}
-          </a>
+          <Link to={link} className="btn btn-outline-primary mt-3 rounded-pill px-4 py-2">{buttonText}</Link>
         </div>
       </div>
     </div>

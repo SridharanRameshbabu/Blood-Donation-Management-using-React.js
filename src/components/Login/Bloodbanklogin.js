@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaEnvelope, FaLock } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link} from "react-router-dom";
 import "./Bloodbanklogin.css";
 
 const Bloodbanklogin = () => {
@@ -79,9 +79,9 @@ const Bloodbanklogin = () => {
 
         <p className="text-center mt-3">
           Don’t have an account?{" "}
-          <a href="/bloodbankregister" className="text-decoration-none text-primary fw-bold">
+          <Link to="/bloodbankregister" className="text-decoration-none text-primary fw-bold">
             Sign up here
-          </a>
+          </Link>
         </p>
       </form>
     </div>

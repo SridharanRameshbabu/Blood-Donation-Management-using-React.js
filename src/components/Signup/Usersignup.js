@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   FaUser,
@@ -192,9 +192,9 @@ const Usersignup = () => {
 
         <p className="text-center mt-3">
           Already have an account?{" "}
-          <a href="/" className="text-decoration-none text-danger fw-bold">
+          <Link to="/" className="text-decoration-none text-danger fw-bold">
             Login Here
-          </a>
+          </Link>
         </p>
       </form>
     </div>
